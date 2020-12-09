@@ -13,21 +13,29 @@
 ActiveRecord::Schema.define(version: 2020_12_04_140407) do
 
   create_table "centers", force: :cascade do |t|
+    t.string "center_type", null: false
+    t.integer "type_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "harmonics", force: :cascade do |t|
+    t.string "harmonics_type", null: false
+    t.integer "type_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "horneys", force: :cascade do |t|
+    t.string "horney_type", null: false
+    t.integer "type_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "types", force: :cascade do |t|
+    t.string "type", null: false
+    t.integer "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
