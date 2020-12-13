@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_04_140407) do
+ActiveRecord::Schema.define(version: 2020_12_09_145352) do
 
   create_table "centers", force: :cascade do |t|
     t.string "center_type", null: false
@@ -36,6 +36,13 @@ ActiveRecord::Schema.define(version: 2020_12_04_140407) do
   create_table "types", force: :cascade do |t|
     t.string "type", null: false
     t.integer "number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.integer "user_type"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
